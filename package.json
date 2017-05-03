@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node ./out/bin/gitwalk.js",
+    "install": "gulp build"
     "test": "gulp test"
   },
   "repository": {
