@@ -69,7 +69,7 @@ class exports.GitHub
     else
       page = page || 1
 
-    @api.repos.getFromOrg {org: org, page: page, type: 'all'}, (err, data) =>
+    @api.repos.getForOrg {org: org, page: page, type: 'sources'}, (err, data) =>
       if err
         callback err, null
         return
@@ -91,7 +91,7 @@ class exports.GitHub
     else
       page = page || 1
 
-    @api.repos.getFromUser {user: user, page: page}, (err, data) =>
+    @api.repos.getForUser {user: user, page: page}, (err, data) =>
       if err
         callback err, null
         return
@@ -105,7 +105,7 @@ class exports.GitHub
         callback null, @repos
 
   resolve: (callback) ->
-    @api.user.getFrom {user: @user}, (err, data) =>
+    @api.user.getForUser {user: @user}, (err, data) =>
       if err
         callback "Unable to retrieve '#{@user}': #{err.message}", null
         return
