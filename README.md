@@ -48,7 +48,7 @@ Gitwalk is distributed as an [npm](https://www.npmjs.com/package/gitwalk) packag
 Use the following command to install it on your system:
 
 ```bash
-$ npm install -g gitwalk
+$ npm install -g athombv/gitwalk
 ```
 
 Make sure to include `-g` to get the CLI command in your `$PATH`.
